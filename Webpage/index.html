@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+
+	<!-- Include CSS files-->
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/toggle_switch.css">
+	<link rel="stylesheet" type="text/css" href="style/font.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<!-- Sidebar-->
+	<div class="sidebar">
+	  <a id="sidebar_home"					><i class="fa fa-fw fa-home"	></i> Home</a>
+      <a id="sidebar_lights"class = "active"><i class="fa fa-fw fa-wrench"	></i> Lights</a>
+      <a id="sidebar_music"					><i class="fa fa-fw fa-user"	></i> Music</a>
+      <a id="sidebar_weather"				><i class="fa fa-fw fa-envelope"></i> Weather</a>
+      <button id="fullscreen"></button>
+      	</div>
+
+	<!-- Main Content-->
+	<!-- Page: Home-->
+	<div class="main_container" id="home_container">
+		<h1>Work in progress...(home)</h1>
+		
+	</div>
+
+
+	<!-- Page: Music-->
+	<div class="main_container" id="music_container">
+		<iframe src="https://open.spotify.com/browse/featured"></iframe>
+	</div>
+
+
+	<!-- Page: Lights-->
+	<div class="main_container" id="lights_container">
+
+		<!-- Buttons panel section-->
+		<div class="flex_container" id="buttons_container">
+			<!-- First button-->
+			<div>
+				<h2>Main</h2>
+				<button class="button" id="button_1">OFF</button>
+			</div>
+			<!-- Second button-->
+			<div>
+				<h2 id="led_desk_title">LED Desk</h2>
+				<button class="button" id="button_2">OFF</button>
+			</div>
+			<!-- Third button-->
+			<div>
+				<h2 id="led_bed_title">LED Bed</h2>
+				<button class="button" id="button_3">OFF</button>
+			</div>
+			<!-- Fourth button-->
+			<div id="switch_4_l">
+				<h2>Bachur</h2>
+				<button class="button" id="button_4">OFF</button>
+			</div>
+		</div>
+		<div class="flex_container">
+
+			<!-- Sunrise sunset simulator settings section-->
+			<div class="flex_container" id="ssSimulator">	
+				<div class="section_title"><h2>Sunrise-Sunset Simulator</h2></div>
+				<!-- Sunrise section-->
+				<div class="flex_container column_container" id="sunrise_section">
+					<!-- button to enable and disable simulator for sunrise-->
+					<div class="flex_container test1">
+						<h2>Sunrise</h2>
+						<!-- Toggle Switch-->
+						<div class="onoffswitch">
+	    					<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="sunrise_onoffswitch" checked>
+	    					<label class="onoffswitch-label" for="sunrise_onoffswitch">
+	        					<span class="onoffswitch-inner"></span>
+	        					<span class="onoffswitch-switch"></span>
+	    					</label>
+						</div>
+					</div>	
+					<div class="flex_container">
+						<!-- Section to setup starting time-->
+						<div class="flex_container column_container">
+							<h3>Time</h3>
+							<input type="time" id="sunrise_time" value="06:00" class="time">
+						</div>
+						<!-- Section to setup ending time-->
+						<div class="flex_container column_container">
+							<h3>Duration</h3>
+							<input type="time" id="sunrise_duration" value="00:30" class="time">
+						</div>
+					</div>
+				</div>
+
+				<!-- Sunset section-->
+				<div class="flex_container column_container" id="sunset_section">
+					<!-- button to enable and disable simulator for sunset-->
+					<div class="flex_container test1">
+						<h2>Sunset</h2>
+						<!-- Toggle Switch-->
+						<div class="onoffswitch">
+	    					<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="sunset_onoffswitch" checked>
+	    					<label class="onoffswitch-label" for="sunset_onoffswitch">
+	        					<span class="onoffswitch-inner"></span>
+	        					<span class="onoffswitch-switch"></span>
+	    					</label>
+						</div>
+					</div>	
+					<div class="flex_container">
+						<!-- Section to setup starting time-->
+						<div class="flex_container column_container">
+							<h3>Time</h3>
+							<input type="time" id="sunset_time" value="21:00" class="time">
+						</div>
+						<!-- Section to setup ending time-->
+						<div class="flex_container column_container">
+							<h3>Duration</h3>
+							<input type="time" id="sunset_duration" value="01:00" class="time">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Color Picker section-->
+			<div class="flex_container" id="colorPicker_div">
+				<div class="section_title"><h2>colorPicker</h2></div>
+				<div id="colorPicker"></div>
+				<div class="flex_container">
+					<h3>Sync lights color</h3>
+					<!-- Toggle Switch-->
+					<div class="onoffswitch">
+    					<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="sync_onoffswitch">
+    					<label class="onoffswitch-label" for="sync_onoffswitch">
+        					<span class="onoffswitch-inner"></span>
+        					<span class="onoffswitch-switch"></span>
+    					</label>
+					</div>
+
+				</div>
+			</div>
+
+		</div>	
+	</div>
+
+
+	<!-- Weather-->
+	<div class="main_container" id="weather_container">	
+		<h1>Work in progress...(weather)</h1>
+	</div>
+
+
+	<!-- Include Javascript files-->
+	<script src="scripts/iro.min.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
+</body>
+</html>
+
+<!-- -->
