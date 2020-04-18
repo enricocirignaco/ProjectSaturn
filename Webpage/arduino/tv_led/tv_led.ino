@@ -23,32 +23,32 @@ void loop() {
   if(Serial.available())
   {
     buf = Serial.readString();
-    Serial.flush();
-    Serial.println(buf);
+    //Serial.flush();
+    //Serial.println(buf);
 
     if(buf == "button_1value=OFF")
     {
-      digitalWrite(2, LOW);
-      digitalWrite(3, LOW);
-      digitalWrite(4, LOW);
+      digitalWrite(2, HIGH);
+      digitalWrite(3, HIGH);
+      digitalWrite(4, HIGH);
     }
     else if(buf == "button_1value=LOW")
     {
-      digitalWrite(2, HIGH);
+      digitalWrite(2, LOW);
       digitalWrite(3, LOW);
       digitalWrite(4, HIGH);
     }
     else if(buf == "button_1value=MID")
     {
-      digitalWrite(2, HIGH);
-      digitalWrite(3, HIGH);
-      digitalWrite(4, HIGH);
+      digitalWrite(2, LOW);
+      digitalWrite(3, LOW);
+      digitalWrite(4, LOW);
     }
     else if(buf == "button_1value=HIGH")
     {
-      digitalWrite(2, HIGH);
-      digitalWrite(4, LOW);
+      digitalWrite(2, LOW);
       digitalWrite(3, HIGH);
+      digitalWrite(4, LOW);
     }
     else if(buf == "red")
     {
