@@ -13,7 +13,7 @@
 	// extract $id
 	$raw_id = isset($_POST['id']) ? $_POST['id'] : '';
 
-	$output = system("../local/sendSerial.sh $raw_id");
+	$output = system("./local/sendSerial.sh $raw_id");
 	echo $raw_id;
 
 	
