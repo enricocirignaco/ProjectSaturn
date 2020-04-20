@@ -281,7 +281,7 @@ function onClickSwitch(object_class) {
 	for (i =0; i < object_class.length; i++) {
 		object_class.item(i).addEventListener("click", function(){
 
-			sendAJAX("id=" + this.id + "value=" + this.checked + "\0");
+			sendAJAX(this.id + "=" + this.checked + "\0");
 		});	
 	}
 }
@@ -290,7 +290,7 @@ onClickBtn(btn_class);
 function onClickBtn(object_class) {
 	for (i =0; i < object_class.length; i++) {
 		object_class.item(i).addEventListener("click", function(){
-			sendAJAX("id=" + this.id + "value=" + this.textContent + "\0");
+			sendAJAX(this.id + "=" + this.textContent + "\0");
 		});	
 	}
 }
@@ -299,7 +299,7 @@ onChangeTime(t_class);
 function onChangeTime(object_classs=t_class) {
 	for (i =0; i < object_classs.length; i++) {
 		object_classs.item(i).addEventListener("change", function(){
-				sendAJAX("id=" + this.id + "value=" + this.value + "\0");
+				sendAJAX(this.id + "=" + this.value + "\0");
 		});
 	}
 }
