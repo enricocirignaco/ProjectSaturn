@@ -13,13 +13,7 @@
 	// extract $id
 	$raw_id = isset($_POST['id']) ? $_POST['id'] : '';
 
-	$output = system("./local/sendSerial.sh $raw_id");
-	echo $raw_id;
-
-	
-	//$x = system("./sendSerial.sh button_4value=ON");
+	system("../local/sendSerial.sh $raw_id");
 
 	  // store in $_SESSION['favorites']
-	  // return true/false
-
 ?>
